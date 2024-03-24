@@ -31,7 +31,7 @@ final class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true //скрываем кнопку назад
+        //navigationItem.hidesBackButton = true //скрываем кнопку назад
 
         
         colorView.layer.cornerRadius = 15
