@@ -11,7 +11,7 @@ import UIKit
 //MARK: - Protocol
 
 protocol SettingsViewControllerDelegate: AnyObject {
-    func newColor(_ color: UIColor)
+    func setColor(_ color: UIColor)
 }
 
 //MARK: - Class
@@ -26,7 +26,7 @@ final class StartViewController: UIViewController, SettingsViewControllerDelegat
 
     }
     
-    func newColor(_ color: UIColor) {
+    func setColor(_ color: UIColor) {
         self.view.backgroundColor = color
         
     }
@@ -34,7 +34,7 @@ final class StartViewController: UIViewController, SettingsViewControllerDelegat
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         let settingsVC = segue.source as? SettingsViewController
         settingsVC?.delegate = self
-        newColor(view.backgroundColor ?? .black)
+        setColor(view.backgroundColor ?? .black)
     }
 
 }

@@ -55,7 +55,7 @@ final class SettingsViewController: UIViewController {
     
     //По тапу на кнопку Done передаем цвет инициализируем передачу цвета
     @IBAction func DoneButtonDidTapped() {
-        delegate?.newColor(colorView.backgroundColor ?? .black)
+        delegate?.setColor(colorView.backgroundColor ?? .black)
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
@@ -103,7 +103,7 @@ extension Float {
 }
 
 extension SettingsViewController: SettingsViewControllerDelegate {
-    func newColor(_ color: UIColor) {
+    func setColor(_ color: UIColor) {
         colorViewItem = color
     }
 }
